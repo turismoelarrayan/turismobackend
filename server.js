@@ -23,10 +23,12 @@ app.post("/send-email", async (req, res) => {
   try {
     // Configura el transporte de Nodemailer
     const transporter = nodemailer.createTransport({
-      service: "gmail", // Usa Gmail como ejemplo
+      host: "smtp.office365.com", // Servidor SMTP de Outlook/Hotmail
+      port: 587,
+      secure: false, // true para 465, false para otros puertos
       auth: {
-        user: process.env.EMAIL, // Tu correo
-        pass: process.env.PASSWORD, // Tu contraseña o app password
+        user: process.env.EMAIL,
+        pass: process.env.PASSWORD,
       },
     });
 
