@@ -33,7 +33,7 @@ app.post("/send-email", async (req, res) => {
     // Configura el contenido del correo
     const mailOptions = {
       from: `"Turismo El Arrayán" <${process.env.EMAIL}>`,
-      to: "tusreservasarrayan@gmail.com", // Correo donde se recibirá el mensaje
+      to: "turismoelarrayanneltume@hotmail.com", // Correo donde se recibirá el mensaje
       subject: `Nuevo mensaje de ${name}`,
       text: `
         Nombre: ${name}
